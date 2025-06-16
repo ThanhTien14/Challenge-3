@@ -2,8 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="my_light_primary">#2196F3</color>"
+    <color name="my_light_primary">#2196F3</color>
     <color name="my_dark_primary">#03A9F4</color>
-    <color name="my_light_onPrimary">#19812F</color>
-    <color name="my_dark_onPrimary">#0E390D</color>
+    <color name="my_light_onPrimary">#4CAF50</color> <!-- Xanh lá nhạt -->
+    <color name="my_dark_onPrimary">#2E7D32</color> <!-- Xanh lá đậm -->
+    <color name="my_green_accent">#81C784</color> <!-- Xanh lá accent -->
 </resources>

@@ -1,7 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme (dark mode) -->
     <style name="Base.Theme.Challenge3" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-         <item name="colorPrimary">@color/my_dark_primary</item>
+        <item name="colorPrimary">@color/my_dark_primary</item>
+        <item name="colorOnPrimary">@color/my_dark_onPrimary</item> <!-- Xanh lá đậm -->
+        <item name="android:statusBarColor">@color/my_dark_onPrimary</item> <!-- Tránh che khuất -->
     </style>
 </resources>

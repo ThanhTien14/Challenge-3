@@ -1,5 +1,6 @@
 package com.example.challenge3;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -8,18 +9,16 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ResultActivity extends AppCompatActivity {
-    private TextView congratulationTitle, scoreText;
-    private Button playAgainButton, exitButton;
-
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        congratulationTitle = findViewById(R.id.congratulationTitle);
-        scoreText = findViewById(R.id.textView2);
-        playAgainButton = findViewById(R.id.playAgainButton);
-        exitButton = findViewById(R.id.exitButton);
+        TextView congratulationTitle = findViewById(R.id.congratulationTitle);
+        TextView scoreText = findViewById(R.id.textView2);
+        Button playAgainButton = findViewById(R.id.playAgainButton);
+        Button exitButton = findViewById(R.id.exitButton);
 
         // Lấy điểm cuối cùng từ Intent
         int finalScore = getIntent().getIntExtra("FINAL_SCORE", 0);

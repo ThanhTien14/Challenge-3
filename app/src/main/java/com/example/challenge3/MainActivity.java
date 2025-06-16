@@ -6,29 +6,31 @@ import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private Button additionButton, subtractionButton, multiplicationButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        additionButton = findViewById(R.id.button);
-        subtractionButton = findViewById(R.id.button2);
-        multiplicationButton = findViewById(R.id.button3);
+        Button additionButton = findViewById(R.id.button);
+        Button subtractionButton = findViewById(R.id.button2);
+        Button multiplicationButton = findViewById(R.id.button3);
 
         additionButton.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, AdditionActivity.class);
             startActivity(intent);
         });
 
-        // Tạm thời bỏ qua Subtraction và Multiplication cho bài tập này
-        subtractionButton.setEnabled(false);
-        multiplicationButton.setEnabled(false);
+        subtractionButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SubtractionActivity.class);
+            startActivity(intent);
+        });
+
+        multiplicationButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MultiplicationActivity.class);
+            startActivity(intent);
+        });
     }
 }
